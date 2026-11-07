@@ -40,7 +40,7 @@ eval:
         --device=mps \
         --inference.type=queue \
         --use_torch_compile=true \
-        --dataset.single_task="pick up the miniature solar panel and place it on the mounting frame" \
+        --dataset.single_task="pick up the solar panel and place it on the mounting frame" \
         --dataset.push_to_hub=False \
         --dataset.streaming_encoding=true \
         --dataset.rgb_encoder.vcodec=hevc_videotoolbox \
@@ -83,7 +83,7 @@ replay: # replays episode 0 by default, otherwise select with replay EPISODE=X
         --robot.port=/dev/tty.usbmodem5B421347741 \
         --robot.id=my_awesome_follower_arm \
         --robot.disable_torque_on_disconnect=false \
-        --dataset.repo_id=Hullow/act_so101_pick_and_place_lego \
+        --dataset.repo_id=Hullow/act_so101_pick_and_place_solar_panel \
         --dataset.episode=$(EPISODE)
 
 setup-follower-motors:
@@ -193,12 +193,12 @@ job-cancel:
     hf jobs cancel $(JOB)
 
 # upload-dataset:
-#    hf upload Hullow/pick_and_place_lego \
+#    hf upload Hullow/pick_and_place_solar_panel \
 #        ~/.cache/huggingface/lerobot/{repo-id} --repo-type dataset
 
 # upload-policy:
-#    hf upload Hullow/pick_and_place_lego \
-#        outputs/train/act_so101_pick_and_place_lego_policy/checkpoints/last/pretrained_model/
+#    hf upload Hullow/pick_and_place_solar_panel \
+#        outputs/train/act_so101_pick_and_place_solar_panel_policy/checkpoints/last/pretrained_model/
 
 # opens an episode in Rerun Viewer. Episode 0 by default, otherwise select with viz EPISODE=X
 viz:
