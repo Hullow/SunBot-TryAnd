@@ -1,0 +1,10 @@
+# Raspberry Pi
+
+## OS Image
+Raspberry Pi OS (64-bit), end of september ? not sure
+
+## September 2026
+- hostname: RobotPi
+- username: francis
+- pw: see keychain (not too long)
+- SSID: phone hotspot
